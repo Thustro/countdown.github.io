@@ -21,17 +21,13 @@ label {
 </head>
 <body>
 <body onload="startTime()">
-<label style="position: relative; top: -60px; right: -475px; font-size: 20px; font-weight: bold;">Kiritimati, Kiribati</label>
-<label style="position: relative; top: -40px; right: -330px; font-size: 20px; font-weight: bold;">UTC + 14:00</label>
-<label style="position: relative; top: -20px; right: -240px; font-size: 20px; font-weight: bold;">LINT</label>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOmSrcDKZ8RtKnoBrqwVuvZcA1F-G49JYSapQYOPOhZQ&s" width="100" height="60" style="position: relative; top: -20px; right: -15px;">
-<p id="days" class="odometer" style="position: relative; top: 50px; right: 90px;"></p>
-<label style="font-size: 60px; position: relative; top: 30px; right: 90px;">:</label>
-<p id="hours" class="odometer" style="position: relative; top: 50px; right: 90px;">:</></p>
-<label style="font-size: 60px; position: relative; top: 30px; right: 90px;">:</label>
-<p id="minutes" class="odometer" style="position: relative; top: 50px; right: 90px;"></p>
-<label style="font-size: 60px; position: relative; top: 30px; right: 90px;">:</label>
-<p id="seconds" class="odometer" style="position: relative; top: 50px; right: 90px;"></p>	
+<p id="days" class="odometer" style="position: relative; top: 50px; right: -50px;"></p>
+<label style="font-size: 60px; position: relative; top: 30px; right: -50px;">:</label>
+<p id="hours" class="odometer" style="position: relative; top: 50px; right: -50px;">:</></p>
+<label style="font-size: 60px; position: relative; top: 30px; right: -50px;">:</label>
+<p id="minutes" class="odometer" style="position: relative; top: 50px; right: -50px;"></p>
+<label style="font-size: 60px; position: relative; top: 30px; right: -50px;">:</label>
+<p id="seconds" class="odometer" style="position: relative; top: 50px; right: -50px;"></p>	
 <script>
 
 const odometers = document.querySelectorAll(".odometer");
@@ -45,7 +41,7 @@ const odometers = document.querySelectorAll(".odometer");
 
 // Set the date we're counting down to
 moment.tz.add('Pacific/Kiritimati|LMT -1040 -10 +14|at.k aE a0 -e0|0123|-2M0Bu.E 3bIMa.E B7Xk|51e2')
-var countDownDate = new moment.tz("2025-01-01 00:00", "Pacific/Kiritimati");
+var countDownDate = new moment.tz("2025-01-01 00:00", "Pacific/Kiritimati|LMT");
 
 // Update the count down every 1 second
 var x = setInterval(function() {
